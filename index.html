@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface</title>
+    <link rel="stylesheet" href="styles.css" type="text/css"></link>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+    <script src="index.js"></script>
+    <img src="maket.jpg" id="maket" hspace="70" height="800px">
+
+    <div id="rangeValue" class="rangeValue"></div>
+    <input type="range" class="range" id="userTemperature" name="" value="0" min="30" max="90" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)"/>
+
+    <div id="water_level" class="water_level"></div>
+    <div id="water_temp" class="water_temp"></div>
+    <div id="time_left" class="time_left"></div>
+    <label class="userStart"><input type="checkbox" id="userStart" value="" onclick="main()"/><span class="checkbox-ios-switch"></span></label> 
+    <label class="userStop"><input type="checkbox" id="userStop" value="" onclick="stop()"/><span class="checkbox-ios-switch"></span></label> 
+
+    <div class="userTime">
+         <p><input name="userTime" id="userTime30" type="radio" value="00"></p>
+         <p><input name="userTime" id="userTime60" type="radio" value="01"></p>
+         <p><input name="userTime" id="userTime90" type="radio" value="10"></p>
+         <p><input name="userTime" id="userTime120" type="radio" value="11" checked></p>
+    </div> 
+
+    <figure>
+        <img src = "nolampa.png" id="levelWaterImg" class="levelWaterImg" height="30px"/img>
+    </figure>
+    <figure>
+        <img src = "nolampa.png" id="tempWaterImg" class="tempWaterImg" height="30px"/img>
+    </figure>
+    <figure>
+        <img src = "nolampa.png" id="draining" class="draining" height="30px"/img>
+    </figure>
+    <figure>
+        <img src = "nolampa.png" id="workDoneImg" class="workDoneImg" height="30px"/img>
+    </figure>
+    <div id="container">
+        <img src = "drum.png" id="image" class="baraban" height="350px"/img>
+    </div>
+    <div class="PLIS">Значения с ПЛИС:
+    <input type="text" id="toStand" size="13">
+    <input type="button" value="ОК" onclick="exPLIS()"></div>
+
+    <div class="toStandPrint">toStand: <div id="toStandPrint"></div></div>
+    <div class="fromStandPrint">fromStand: <div id="fromStandPrint"> </div></div>
+</body>
+</html>
